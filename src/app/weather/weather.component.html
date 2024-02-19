@@ -1,0 +1,66 @@
+<div class="container w-min mx-auto mt-7 flex">
+    <input type="text" class="py-2 px-3 rounded-md border-none focus:outline-none" [(ngModel)]="city">
+    
+    <button class="ml-2 px-3 bg-blue-600 rounded-md text-white" (click)="getW(city)" type="button">Search</button>
+</div>
+<div class="container w-80 mx-auto mt-7 shadow-2xl rounded-xl">
+    <div class="relative h-72 rounded-xl">
+        <img class="h-72 w-full rounded-t-xl" src="../../assets/cloudy.jpg" alt="Cold">
+        <p class="absolute left-0 right-0 text-center top-16 font-bold text-2xl text-white">{{cityName}}</p>
+        <h1 class="absolute left-0 right-0 text-center top-28 font-bold text-6xl text-white">{{ currTemp | number:'1.0-0' }} °C</h1>
+    </div>
+    <div class="h-80 rounded-b-xl">
+        <p class="text-white font-normal pl-4 pt-3">More information</p>
+
+    <div class="w-74 h-64 bg-[#5c62b0] m-3 rounded-md grid grid-cols-2">
+        <!-- 1 -->
+        <div class="flex">
+            <div>
+                <img class="h-16 pl-7 pt-5" src="../../assets/Cold-Weather-PNG.png" alt="">
+                <p class="pl-8 text-xs text-white ">min</p>
+            </div>
+
+            <div class="pt-8 font-medium text-white pl-6">
+                <p>{{temp_min | number:'1.0-0'}} °c</p>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="flex">
+            <div>
+                <img class="h-16 w-auto pl-5 pt-7" src="../../assets/Heat-PNG-Isolated-Pic.png" alt="">
+                <p class="pl-8 text-xs text-white ">max</p>
+            </div>
+
+            <div class="pt-8 font-medium text-white pl-7">
+                <p>{{temp_max | number:'1.0-0'}} °c</p>
+            </div>
+        </div>
+        
+        <!-- 3 -->
+        <div class="flex">
+            <div>
+                <img class="h-14 w-auto pl-3 pt-5" src="../../assets/Weather-PNG-Picture.png" alt="">
+                <p class="pl-4 text-xs text-white ">humidity</p>
+            </div>
+
+            <div class="pt-8 font-medium text-white pl-2">
+                <p>{{humidity | number:'1.0-0'}} %</p>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="flex">
+            <div>
+                <img class="h-14 pl-5 pt-5" src="../../assets/Wind-PNG-Transparent-Image.png" alt="">
+                <p class="pl-7 text-xs text-white ">wind</p>
+            </div>
+
+            <div class="pt-8 font-medium text-white pl-6">
+                <p>{{wind | number:'1.0-0'}} km/h</p>
+            </div>
+        </div>
+
+     </div>
+    </div>
+</div>
